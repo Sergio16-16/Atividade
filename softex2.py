@@ -17,3 +17,5 @@ while c == "c":
         print(divisao)
     else:
         print(0)
+        
+        print("cu")
