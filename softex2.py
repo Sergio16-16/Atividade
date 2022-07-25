@@ -9,13 +9,16 @@ while c == "c":
     operacao = str(input("Qual operação voce deseja \n+ para soma\n- para subtração\n* para multiplicação\n/ para divisão\n"))
     if operacao == "+":
         print(soma)
+        c = str(input("Digite c para continuar: "))
     elif operacao == "-":
         print(subtracao)
+        c = str(input("Digite c para continuar: "))
     elif operacao == "*":
         print(multiplicacao)
+        c = str(input("Digite c para continuar: "))
     elif operacao == "/":
         print(divisao)
+        c = str(input("Digite c para continuar: "))
     else:
         print(0)
         
-        print("cu")
