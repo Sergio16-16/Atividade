@@ -1,1 +1,21 @@
+while True:
+    Nome = str(input("Digite seu nome completo: "))
+    nascimento = int(input("Digite o ano que voce nasceu: "))
+    if type (nascimento) is int:
+        idade = 2022 - nascimento
+        print (idade)
+        break
+    elif type (nascimento) is str:
+        nascimento = int(input("Digite o ano que voce nasceu: "))
+        raise Exception("isso não é um numero")
 
+while True:
+    Nome = str(input("Digite seu nome completo: "))
+    nascimento = int(input("Digite o ano que voce nasceu: "))
+    if type (nascimento) is int:
+        idade = 2022 - nascimento
+        print (idade)
+        break
+    elif type (nascimento) is str:
+        nascimento = int(input("Digite o ano que voce nasceu: "))
+        raise Exception("isso não é um numero")
