@@ -1,0 +1,37 @@
+import random
+produto = [(1,'Feijao','Preto'),(2,'Arroz','Branco'),(3,'Maracuja','Redondo'),(4,'Farofa','temperada'),(5,'Espinafre','verde'),(6,'pizza','de calabresa'),(7,'Biscoito','povilho')]
+quantidade = [random.randint(1,8) for i in range(7)]
+clientes=[]
+vendas = []
+produto_fim = [produto[i] for i in range(len(produto)) if quantidade[i] <= 3]
+print("Produtos com estoque no fim",produto_fim)
+while True:
+    codigo_cliente = int(input("Digite o Seu codigo de cliente: "))
+    if codigo_cliente == 0:
+        break
+    nome_cliente = input("Qual o nome do comprador: ")
+    resproduto = int(input("Digite o codigo do produto que deseja: "))
+    if not resproduto in [item[0] for item in produto]:
+        print("Codigo Inválido!!!")
+    else:
+        resposta_quantidade = int(input("Digite a quantidade: "))
+        posicao_produto = -1
+        for i in range(0, len(produto)):
+            if produto [i][0] == resproduto:
+                posicao_produto = i
+        if  resposta_quantidade > quantidade[posicao_produto]:
+            print("Não temos estoque suficiente.")
+        else:
+            print("pedido atendido.obrigado,volte sempre!")
+            quantidade[posicao_produto] = quantidade[posicao_produto] - resposta_quantidade
+            novo_cliente = (codigo_cliente,nome_cliente)
+            nova_venda = (resproduto,codigo_cliente,resposta_quantidade)
+            clientes.append(novo_cliente)
+            vendas.append(nova_venda)           
+for i in range(0, len(produto)):
+    print(f"produto {produto[i][1]}, estoque {quantidade[i]}")
+vendas_fim =[item for item in vendas if item[2] >=2] 
+for item in vendas_fim:
+    print(f"o cliente {item[1]} levou do produto {item[0]}  a quantidade {item[2]}")           
+            
+            
