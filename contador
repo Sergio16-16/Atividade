@@ -1,0 +1,14 @@
+contador = 0
+while True:
+    print("Escolha entre 1, 2 , 3 ou 0 para sair")
+    resposta= input("")
+    if resposta == "1":
+        contador = contador + 1    
+    elif resposta == "2":
+        contador = contador + 1
+    elif resposta == "3":
+        contador = contador + 1
+    elif resposta == "0":
+        print(contador)
+        break
+            
