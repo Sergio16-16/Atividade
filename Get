@@ -1,0 +1,18 @@
+public class softex {
+	private double a;
+	private double b;
+
+	public softex(double a, double b) {
+		this.a = a;
+		this.b = b;
+	}
+
+	public double getA() { return A; }
+
+	public double getB() { return B; }
+
+	public void setA(double a) { this.a = a; }
+
+	public void setB(double b) { this.b = b; }
+
+}
